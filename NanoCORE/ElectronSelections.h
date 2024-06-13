@@ -2,6 +2,7 @@
 #define ELECTRONSELECTIONS_H
 #include "Base.h"
 #include "Nano.h"
+#include "Tools/xgboost/XGBoostInterface.h"
 
 namespace SS {
     enum ElectronMVAIDLevel {
@@ -31,10 +32,11 @@ namespace ttH {
 }
 
 namespace WWZ {
+    extern std::shared_ptr<XGBoostInterface> electron_mvareader_map;
+    void electronLoadMVA(std::string fname);
+    float computeElectronTopMVAScore(unsigned int idx);
     bool electronID(int idx, WWZ::IDLevel id_level, int year);
-    bool electron2016ID(int idx, WWZ::IDLevel id_level);
-    bool electron2017ID(int idx, WWZ::IDLevel id_level);
-    bool electron2018ID(int idx, WWZ::IDLevel id_level);
+    bool electronRun2ID(int idx);
     bool electron2022ID(int idx, WWZ::IDLevel id_level);
 }
 

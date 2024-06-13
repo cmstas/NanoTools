@@ -75,8 +75,8 @@ if __name__ == "__main__":
                             ]
                         },
                     max_jobs = njobs_to_process(ds.get_datasetname()),
-                    cmssw_version = "CMSSW_10_2_13",
-                    scram_arch = "slc7_amd64_gcc700",
+                    cmssw_version = "CMSSW_11_2_0_pre5",
+                    scram_arch = "slc7_amd64_gcc900",
                     input_executable = "{}/condor_executable_metis.sh".format(condorpath), # your condor executable here
                     tarfile = "{}/package.tar.xz".format(condorpath), # your tarfile with assorted goodies here
                     special_dir = "skim/{}".format(tag), # output files into /hadoop/cms/store/<user>/<special_dir>

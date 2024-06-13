@@ -3,7 +3,7 @@
 git clone https://github.com/cmstas/NanoTools
 cd NanoTools/
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-cd /cvmfs/cms.cern.ch/slc7_amd64_gcc700/cms/cmssw/CMSSW_10_2_13/ ; cmsenv ; cd -
+cd /cvmfs/cms.cern.ch/slc7_amd64_gcc900/cms/cmssw/CMSSW_11_2_0_pre5/ ; cmsenv ; cd -
 cd NanoCORE
 make test -j12
 cd ..
@@ -27,7 +27,7 @@ cd workarea/skimtest
 git clone https://github.com/cmstas/NanoTools
 cd NanoTools/
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-cd /cvmfs/cms.cern.ch/slc7_amd64_gcc700/cms/cmssw/CMSSW_10_2_13/ ; cmsenv ; cd -
+cd /cvmfs/cms.cern.ch/slc7_amd64_gcc900/cms/cmssw/CMSSW_11_2_0_pre5/ ; cmsenv ; cd -
 cd NanoCORE
 make test -j12
 cd ..
