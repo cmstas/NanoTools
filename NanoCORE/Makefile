@@ -1,6 +1,9 @@
 include Makefile.arch
 
-SOURCES=$(wildcard *.cc) $(wildcard Tools/*.cc) $(wildcard Tools/btagsf/*.cc) $(wildcard Tools/jetcorr/PhysicsTools/NanoAODTools/src/*.cc)
+SOURCES=$(wildcard *.cc) $(wildcard Tools/*.cc) $(wildcard Tools/btagsf/*.cc)
+ifdef CMSSW_BASE
+SOURCES+=$(wildcard Tools/jetcorr/PhysicsTools/NanoAODTools/src/*.cc)
+endif
 OBJECTS=$(SOURCES:.cc=.o)
 LIB=NANO_CORE.so
 
